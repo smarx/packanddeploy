@@ -1,4 +1,4 @@
-This is simple scaffolding for packaging a Windows Azure app that just runs an executable. The example app being executed is [mongoose](http://code.google.com/p/mongoose/), but anything could take its place, including apps that *don't* serve up content on port 80.
+This is a simple scaffolding for packaging a Windows Azure app that just runs an executable. The example app being executed is [mongoose](http://code.google.com/p/mongoose/), but anything could take its place, including apps that *don't* serve up content on port 80.
 
 Usage
 =====
