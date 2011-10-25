@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="PackAndDeploy" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+    <WorkerRole name="WorkerRole" vmsize="ExtraSmall">
+        <Runtime>
+            <Environment>
+                <Variable name="ADDRESS">
+                    <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/Endpoints/Endpoint[@name='HttpIn']/@address" />
+                </Variable>
+                <Variable name="PORT">
+                    <RoleInstanceValue xpath="/RoleEnvironment/CurrentInstance/Endpoints/Endpoint[@name='HttpIn']/@port" />
+                </Variable>
+            </Environment>
+            <EntryPoint>
+                <ProgramEntryPoint commandLine="run.cmd" setReadyOnProcessStart="true" />
+            </EntryPoint>
+        </Runtime>
+        <Endpoints>
+            <InputEndpoint name="HttpIn" protocol="tcp" port="80" />
+        </Endpoints>
+    </WorkerRole>
+</ServiceDefinition>
