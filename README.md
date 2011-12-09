@@ -4,7 +4,7 @@ Usage
 =====
 
 1. Edit `WorkerRole\run.cmd` to do whatever you want. (Typically launch some sort of web server or a worker process. Either way, that process should run indefinitely.)
-2. Run `build.cmd & run.cmd` to build and run the application locally.
+2. Run `run.cmd` to build and run the application locally.
 3. Run `pack.cmd` to output `PackAndRun.cspkg`. That file, along with `ServiceConfiguration.cscfg` is what you need to deploy via the Windows Azure portal (or with some other tool) to get the app running in the cloud.
 
 Understanding the Code
